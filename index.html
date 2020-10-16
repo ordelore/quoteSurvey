@@ -1,11 +1,44 @@
-<form action="save-to-log.php" method="POST">
-    <p id="prompt">Quote goes here</p>
-    <input type="hidden" name="promptText" value="Hidden goes here">
-    <input type="radio" id="OpA" name="myRadio" value="OpA">
-    <label for="OpA" id="OpALabel">Apple</label>
-    <input type="hidden" id="OpAText" name="OpAText" value="Apple">
-    <input type="radio" id="OpB" name="myRadio" value="OpB">
-    <label for="OpB" id="OpBLabel">Orange</label></br>
-    <input type="hidden" id="OpBText" name="OpBText" value="Orange">
-    <input type="submit" value="SAVE" />
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quote Survey</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="main.css"/>
+    </head>
+    <body>
+        <div class="introduction">
+            <p id="intro">Welcome to my quote attribution survey! Your job is to select the quote/person that best matches the given person/quote. It is possible that the person-quote combination you choose is not historically accurate, that is understandable. Just follow your gut about what feels right.</p>
+            <p id="">The only information this website collects is which radio button you select, and I do not keep track of any personal information that might be accesible by a browser.</p>
+            <p id=""> If you suspect that the survey is not working correctly, feel free to shoot me an email at ordelore (at) uchicago (dot) edu.</p>
+            <p>How to take this survey:</p>
+            <ol>
+                <li>Read the provided name or quote.</li>
+                <li>Choose the quote or name that best matches the provided name or quote.</li>
+                <li>Press 'Submit' to send your response and generate a new prompt.</li>
+            </ol>
+        </div>
+        <div class="container">
+            <form action="save-to-log.php" method="POST">
+                <div class="promptBox">
+                    <p id="prompt">Quote goes here</p>
+                    <input type="hidden" name="promptText" value="Hidden goes here">
+                </div>
+                <div class="radioBox">
+                    <div class="RadioLabel">
+                        <input type="radio" class="rad" id="OpA" name="myRadio" value="OpA">
+                        <label for="OpA" class="radText" id="OpALabel">John Crow</label>
+                        <input type="hidden" id="OpAText" name="OpAText" value="Apple">
+                    </div>
+                    <div class="RadioLabel">
+                        <input type="radio" class="rad" id="OpB" name="myRadio" value="OpB">
+                        <label for="OpB" id="OpBLabel">Longfirstname longlastname</label></br>
+                        <input type="hidden" class="radText" id="OpBText" name="OpBText" value="Orange">
+                    </div>
+                </div>
+                <div class="submitButton">
+                    <input type="submit" id="button" value="SUBMIT" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
