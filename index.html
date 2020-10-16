@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="main.css"/>
     </head>
     <body>
+    <script src="index.js"></script>
         <div class="introduction">
             <p id="intro">Welcome to my quote attribution survey! Your job is to select the quote/person that best matches the given person/quote. It is possible that the person-quote combination you choose is not historically accurate, that is understandable. Just follow your gut about what feels right.</p>
             <p id="">The only information this website collects is which radio button you select, and I do not keep track of any personal information that might be accesible by a browser.</p>
@@ -21,7 +22,7 @@
             <form action="save-to-log.php" method="POST">
                 <div class="promptBox">
                     <p id="prompt">Quote goes here</p>
-                    <input type="hidden" name="promptText" value="Hidden goes here">
+                    <input type="hidden" name="promptText" id ="promptText" value="Hidden goes here">
                 </div>
                 <div class="radioBox">
                     <div class="RadioLabel">
